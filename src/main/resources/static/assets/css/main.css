@@ -1,0 +1,180 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: rgb(255, 145, 213);
+}
+
+header {
+  background: blue;
+  color: red;
+}
+
+.left-side,
+.right-side {
+  height: 100vh
+}
+
+.navbar-transparent {
+  background: rgb(255, 145, 213);
+}
+
+.navbar-nav>li>a {
+  color: #fff
+}
+
+.navbar-nav>li:hover {
+  border-bottom: 1px solid #fff
+}
+
+.navbar-nav>.active {
+  border-bottom: 1px solid #fff
+}
+
+.navbar-brand {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: #fff
+}
+
+.nav-button {
+  color: white;
+}
+
+.grid-container {
+  -webkit-columns: 5 200px;
+          columns: 5 200px;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.grid-container div {
+  width: 150px;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+  border: solid 2px black;
+  padding: 5px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.grid-container div:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.grid-container div:hover {
+  border-color: rgb(255, 145, 213);
+}
+
+.grid-container div img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  border-radius: 5px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.grid-container div p {
+  margin: 5px 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.description-text {
+  color:rgb(230, 114, 185);
+  font-weight: 700;
+}
+
+.footer-bg {
+  color: white;
+  background-color: rgb(255, 145, 213);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  height: 50px;
+  line-height: 50px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* Dành cho điện thoại */
+@media all and (max-width: 320px) {
+  .grid-container {
+    -webkit-columns: 2 ;
+            columns: 2 ;
+            width: 90%;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .grid-container {
+    -webkit-columns: 2 ;
+            columns: 2 ;
+            width: 90%;
+  }
+}
+
+/* Dành cho máy tính bảng chiều dọc */
+  @media all and (min-width: 600px) {
+  .grid-container {
+    -webkit-columns: 3 ;
+            columns: 3  ;
+    
+    width: 90%;
+    
+  }
+}  
+
+/* Dành cho máy tính bảng chiều ngang */
+@media all and (min-width: 1024px) {
+  .grid-container {
+    -webkit-columns:  5 200px;
+            columns: 5 200px !important;
+    -webkit-column-gap: 1.5rem;
+            column-gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+} 
+/*# sourceMappingURL=main.css.map */
