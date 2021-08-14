@@ -41,7 +41,7 @@ public class ImageController {
 			List<Image> list = imageService.findAll();
 			model.addAttribute("items", list);
 		
-		return "/home/index";
+		return "home/index";
 	}
 	
 	@GetMapping("/home")
@@ -49,7 +49,7 @@ public class ImageController {
 			@RequestParam(name = "page", required = false, defaultValue = "0") Integer page){
 //	    Page<Image> images = imageService.findAndPage(pageable);
 	    Page<Image> images = imageService.findAndPage(PageRequest.of(page, 20,Sort.by("id").descending()));
-	    ModelAndView modelAndView = new ModelAndView("/images/list");
+	    ModelAndView modelAndView = new ModelAndView("images/list");
 	    modelAndView.addObject("images", images);
 	    return modelAndView;
 	}
