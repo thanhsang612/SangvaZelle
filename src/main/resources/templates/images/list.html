@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 
 <head>
-  <title>Title</title>
+  <title>SangxZelle</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,12 +16,10 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" th:href="@{/assets/css/main.css}">
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script th:src="@{/assets/js/main.js}"></script>
 
 </head>
 
 <body>
-  <!-- <h1 class="text-center">Zelleee x Saanggg</h1> -->
 
   <header>
 
@@ -52,8 +50,7 @@
   </div>
 
   <div class="d-flex justify-content-center">
-    <!-- <a th:href="@{'/home'(page=${images.number - 1})}" th:if="${images.hasPrevious()}" 
-        class="btn btn-outline-dark">Previous</a> -->
+   
     <a th:href="@{'/home'(page=0)}" class="btn btn-outline-dark">First</a>&nbsp;
 
     <a th:href="@{'/home'(page=${images.number - 2})}" th:text="${images.number-1}" th:if="${images.number-1} >= 1"
@@ -73,8 +70,6 @@
 
     <a th:href="@{'/home'(page=${images.totalPages-1})}" class="btn btn-outline-dark">Last</a>
 
-    <!-- <a th:href="@{'/home'(page=${images.number + 1})}" th:if="${images.hasNext()}"
-        class="btn btn-outline-dark">Next</a> -->
   </div>
 
   <div class="d-flex justify-content-center">
